@@ -1,0 +1,44 @@
+.ketish-column {
+    text-align: left;
+  }
+  
+  .kelish-column {
+    text-align: left;   
+  }
+  
+  .reys-column {
+    text-align: left;
+  }
+  
+  .seat-column {
+    text-align: left;
+  }
+  
+  .tariff-column {
+    text-align: right;
+    border-right: 1px solid black;
+    font-weight: bold;
+  }
+  
+  .model-column {
+    text-align: left;
+    
+  }
+  
+  .even-row {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .odd-row {
+    background-color: white;
+  }
+  .custom-row .ant-table-cell {
+    padding: 16px;
+  }
+  .ant-table-cell{
+    padding:  0px;
+  }
+  
+  

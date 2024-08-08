@@ -164,7 +164,7 @@ export const HomePage = () => {
 
         <div className="row mt-5 pt-5 ">
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="bg-white p-3 rounded-4">
+            <div className="bg-white p-3 rounded-4 mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -193,7 +193,7 @@ export const HomePage = () => {
             </div>
           </div>
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="bg-white p-3 rounded-4">
+            <div className="bg-white p-3 rounded-4 mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -224,7 +224,7 @@ export const HomePage = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="bg-white p-3 rounded-4">
+            <div className="bg-white p-3 rounded-4 mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"

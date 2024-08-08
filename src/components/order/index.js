@@ -9,10 +9,7 @@ export const Order = () => {
     choose,
     click,
     regionDeparture,
-    regionArrive,
-    setTicketEmail,
-    setTicketName,
-    setTicketPhone,
+    regionArrive, 
     setTicketValue,
     ticketValue,
   } = useContext(ApiContext);

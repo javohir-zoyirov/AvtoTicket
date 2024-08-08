@@ -28,7 +28,7 @@ export const Tiklash = () => {
         <p style={{ color: "#26404d" }} className="text-black fw-bold mb-4">
           Chipta sotib olingan telefon raqamini kiriting
         </p>
-        <div className="bg-white rounded-3 p-3 w-50 py-4">
+        <div className="bg-white rounded-3 p-3  py-4">
           <label className="text-secondary mb-2 fs-5 fw-bold">
             Telefon raqam
           </label>

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 
 export const HomePage = () => {
   const {
-    regionData,
+    region2Data,
     regionDeparture,
     setRegionDeparture,
     regionArrive,
@@ -89,7 +89,7 @@ export const HomePage = () => {
       className="bg-sec"
     >
       <Header />
-      <div style={{ height: "100vh" }} className="container py-5">
+      <div style={{ height: "100vh" }} className="container h-100 py-5">
         <h1 className="fw-bold text-white">
           Har kuni O'zbekiston bo'ylab avtobus qatnovi
         </h1>
@@ -127,7 +127,7 @@ export const HomePage = () => {
             <p className="p-0 m-0">
               <span className="text-black fw-bold">{regionArrive}</span>
               <span className="text-secondary fw-bold ms-3">
-                {districtArrive.slice(0,10)}
+                {districtArrive.slice(0,9)}
               </span>
             </p>
           </div>
@@ -154,7 +154,7 @@ export const HomePage = () => {
             onClick={() => {
               navigate("/reys");
             }}
-            style={{ cursor: "pointer", backgroundColor: "#18aaf2" }}
+            style={{ cursor: "pointer", backgroundColor: "#18aaf2", }}
             className="text-white px-5 py-4 rounded-4 fw-bold btn w-100 mb-4"
           >
             Qidiruvni boshlash
@@ -163,8 +163,8 @@ export const HomePage = () => {
         </div>
 
         <div className="row mt-5 pt-5 ">
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className="bg-white p-3 rounded-4 mb-3">
+          <div className="col-lg-4 col-md-6 col-12 mb-4">
+            <div className="bg-white p-3 rounded-4 h-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -192,8 +192,8 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className="bg-white p-3 rounded-4 mb-3">
+          <div className="col-lg-4 col-md-6 col-12 mb-4">
+            <div className="bg-white p-3 rounded-4 h-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -223,8 +223,8 @@ export const HomePage = () => {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-6 col-12">
-            <div className="bg-white p-3 rounded-4 mb-3">
+          <div className="col-lg-4 col-md-6 col-12 mb-4">
+            <div className="bg-white p-3 rounded-4 h-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
@@ -242,10 +242,10 @@ export const HomePage = () => {
                 Muammo bormi? 8:00-20:00 Texnik yordam xizmatiga murojaat qiling
               </p>
               <button
-                style={{ border: "1px solid #18aaf2", color: "#18aaf2" }}
+                style={{ border: "1px solid #18aaf2"}}
                 className="btn rounded-3 fw-bold"
               >
-                Qo'ng'iroq qilish
+                <a style={{textDecoration:"none", color: "#18aaf2" }} href="tel: +998938032475">Qo'ng'iroq qilish</a>
               </button>
             </div>
           </div>
@@ -288,7 +288,7 @@ export const HomePage = () => {
             </div>
           ) : (
             <div className="d-flex align-items-center gap-2 flex-wrap">
-              {regionData?.map((item, index) => (
+              {region2Data?.map((item, index) => (
                 <div
                   onClick={() => {
                     districts(item);
@@ -343,7 +343,7 @@ export const HomePage = () => {
             </div>
           ) : (
             <div className="d-flex align-items-center gap-2 flex-wrap">
-              {regionData?.map((item, index) => (
+              {region2Data?.map((item, index) => (
                 <div
                   onClick={() => {
                     districts2(item);

@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import { ApiContext } from "./components/context";
 import { HomePage } from "./components/home-page";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RegionData } from "./components/data/regionData";
 import { About } from "./components/about-me";
 import { Questions } from "./components/question and answer";
@@ -16,8 +16,12 @@ import { Order } from "./components/order";
 import { Payment } from "./components/payment";
 
 function App() {
-  const [regionData, setRegionData] = useState([...RegionData]);
-  const [reysData, setReysData] = useState([...ReysData]);
+  const [region2Data, setRegionData] = useState(
+    JSON.parse(localStorage.getItem("regionData")) || [...RegionData]
+  );
+  const [reys2Data, setReysData] = useState(
+    JSON.parse(localStorage.getItem("reysData")) || [...ReysData]
+  );
   const [regionDeparture, setRegionDeparture] = useState("");
   const [regionArrive, setRegionArrive] = useState("");
   const [districtDeparture, setDistrictDeparture] = useState("");
@@ -35,9 +39,10 @@ function App() {
   const [ticketEmail, setTicketEmail] = useState("");
   const [ticketValue, setTicketValue] = useState([]);
 
-  // console.log(ticketName, "ticketNAme");
-  // console.log(ticketPhone, "ticketPhone");
-  // console.log(ticketEmail, "ticketEmail");
+  useEffect(() => {
+    localStorage.setItem("reysData", JSON.stringify(reys2Data));
+    localStorage.setItem("regionData", JSON.stringify(region2Data));
+  }, [reys2Data, region2Data]);
 
   return (
     <div>
@@ -55,9 +60,9 @@ function App() {
           setClick,
           setChoose,
           choose,
-          reysData,
+          reys2Data,
           setReysData,
-          regionData,
+          region2Data,
           regionDeparture,
           setRegionDeparture,
           regionArrive,
@@ -90,7 +95,7 @@ function App() {
             <Route path="/reys" element={<Reys />} />
             <Route path="/ticket-choose" element={<TicketChoose />} />
             <Route path="/order" element={<Order />} />
-            <Route path="/payment" element={<Payment/>} />
+            <Route path="/payment" element={<Payment />} />
           </Routes>
         </Router>
       </ApiContext.Provider>

@@ -19,7 +19,7 @@ export const TicketChoose = () => {
             {choose?.date}, Safar vaqti - 6 s. 0 daq.
           </p>
         </div>
-        <div style={{overflowX:"scroll"}} className="container bg-white mx-auto d-flex align-content-center justify-content-center py-5 rounded-4 p-5">
+        <div style={{overflowX:"scroll", width:"100%"}} className="container bg-white mx-auto d-flex align-content-center justify-content-center rounded-4 p-5">
           <div>
             <div className="d-flex align-items-center gap-3">
               <span

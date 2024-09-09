@@ -3,7 +3,7 @@ import { createContext } from "react";
 export const ApiContext = createContext({
   ticketValue:[],
   setTicketValue:(ticketValue) =>{},
-  regionData: [],
+  region2Data: [],
   regionDeparture: "",
   setRegionDeparture: (regionDeparture) => {},
   regionArrive: "",
@@ -24,7 +24,7 @@ export const ApiContext = createContext({
   setFilterData: (filterData) => {},
   filterData2: [],
   setFilterData2: (filterData2) => {},
-  reysData: [],
+  reys2Data: [],
   setReysData: (reysData) => {},
   choose: [],
   setChoose: (choose) => {},

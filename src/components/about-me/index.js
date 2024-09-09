@@ -12,8 +12,8 @@ export const About = () => {
 
         <div className="row">
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="card p-2 bg-transparent border-0">
-              <span className="p-3 border rounded-pill bg-white w-25">
+            <div className="p-2 bg-transparent border-0">
+              <span style={{display:"inline-block"}} className="p-3 border rounded-pill bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -31,14 +31,14 @@ export const About = () => {
               <p style={{ color: "#26404d" }} className="">
                 Ushbu xizmat yordamida osongina va tezda MDHda avtobus reyslari
                 uchun chiptalarni topish va bron qilish yoki darhol sotib olish
-                mumkinÏ
+                mumkin!
               </p>
             </div>
           </div>
 
           <div className="col-lg-4  col-md-6 col-12">
-            <div className="card p-2 bg-transparent border-0">
-              <span className="p-3 border rounded-pill bg-white w-25">
+            <div className="p-2 bg-transparent border-0">
+              <span style={{display:"inline-block"}} className="p-3 border rounded-pill bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -63,8 +63,8 @@ export const About = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="card p-2 bg-transparent border-0">
-              <span className="p-3 border rounded-pill bg-white w-25">
+            <div className="p-2 bg-transparent border-0">
+              <span style={{display:"inline-block"}} className="p-3 border rounded-pill bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -87,8 +87,8 @@ export const About = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="card p-2 bg-transparent border-0">
-              <span className="p-3 border rounded-pill bg-white w-25">
+            <div className="p-2 bg-transparent border-0">
+              <span style={{display:"inline-block"}} className="p-3 border rounded-pill bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -113,8 +113,8 @@ export const About = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="card p-2 bg-transparent border-0">
-              <span className="p-3 border rounded-pill bg-white w-25">
+            <div className="p-2 bg-transparent border-0">
+              <span style={{display:"inline-block"}} className="p-3 border rounded-pill bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"
@@ -139,8 +139,8 @@ export const About = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 col-12">
-            <div className="card p-2 bg-transparent border-0">
-              <span className="p-3 border rounded-pill bg-white w-25">
+            <div className="p-2 bg-transparent border-0">
+              <span style={{display:"inline-block"}} className="p-3 border rounded-pill bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="48"

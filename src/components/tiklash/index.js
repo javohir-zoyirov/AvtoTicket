@@ -56,61 +56,66 @@ export const Tiklash = () => {
 
       <Modal
         footer={null}
-        title="Basic Modal"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        {Object.values(ticketValue)
-          .filter((item) => item.ticketPhone.includes(value))
-          .map((res,index) => (
-            <div className="mb-5 p-4 border-bottom">
-              <div className="w-50">
-                <img
-                  className="w-100"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/800px-QR_code_for_mobile_English_Wikipedia.svg.png"
-                />
-              </div>
+        {ticketValue.length === 0 ? (
+          Object.values(ticketValue)
+            .filter((item) => item.ticketPhone.includes(value))
+            .map((res, index) => (
+              <div className="mb-5 p-4 border-bottom">
+                <div className="w-50">
+                  <img
+                    className="w-100"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/800px-QR_code_for_mobile_English_Wikipedia.svg.png"
+                  />
+                </div>
 
-              <div>
-                <p className="p-0 m-0">
-                  Jo'nash bekati:{" "}
-                  <span className="fw-bold fs-5 ms-3">{regionDeparture}</span>{" "}
-                </p>
-                <p className="p-0 m-0">
-                  Kelish bekati:{" "}
-                  <span className="fw-bold fs-5 ms-3">{regionArrive}</span>{" "}
-                </p>
-                <p className="p-0 m-0">
-                  Jo'nash vaqti :{" "}
-                  <span className="fw-bold fs-5 ms-3">{choose?.leaveTime}</span>{" "}
-                </p>
-                <p className="p-0 m-0">
-                  Avtobusda o'rin:{" "}
-                  <span className="fw-bold fs-5 ms-3">{click[index]}</span>{" "}
-                </p>
-                <p className="p-0 m-0">
-                  Avtobusda o'rin:{" "}
-                  <span className="fw-bold fs-5 ms-3">{res?.ticketName}</span>{" "}
-                </p>
-                <p className="p-0 m-0">
-                  To'lov turi:{" "}
-                  <span className="fw-bold fs-5 ms-3">Kartada</span>
-                </p>
-                <p className="p-0 m-0">
-                  Bilet narxi:{" "}
-                  <span className="fw-bold fs-5 ms-3">{choose.price}</span>
-                </p>
+                <div>
+                  <p className="p-0 m-0">
+                    Jo'nash bekati:{" "}
+                    <span className="fw-bold fs-5 ms-3">{regionDeparture}</span>{" "}
+                  </p>
+                  <p className="p-0 m-0">
+                    Kelish bekati:{" "}
+                    <span className="fw-bold fs-5 ms-3">{regionArrive}</span>{" "}
+                  </p>
+                  <p className="p-0 m-0">
+                    Jo'nash vaqti :{" "}
+                    <span className="fw-bold fs-5 ms-3">
+                      {choose?.leaveTime}
+                    </span>{" "}
+                  </p>
+                  <p className="p-0 m-0">
+                    Avtobusda o'rin:{" "}
+                    <span className="fw-bold fs-5 ms-3">{click[index]}</span>{" "}
+                  </p>
+                  <p className="p-0 m-0">
+                    Avtobusda o'rin:{" "}
+                    <span className="fw-bold fs-5 ms-3">{res?.ticketName}</span>{" "}
+                  </p>
+                  <p className="p-0 m-0">
+                    To'lov turi:{" "}
+                    <span className="fw-bold fs-5 ms-3">Kartada</span>
+                  </p>
+                  <p className="p-0 m-0">
+                    Bilet narxi:{" "}
+                    <span className="fw-bold fs-5 ms-3">{choose.price}</span>
+                  </p>
+                </div>
+                <div className="text-center">
+                  <button className="text-center btn border-0 fs-3">
+                    <a href={"https://web.telegram.org"}>
+                      <ShareAltOutlined />
+                    </a>
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-        <div className="text-center">
-          <button className="text-center btn border-0 fs-3">
-            <a href={"https://web.telegram.org"}>
-              <ShareAltOutlined />
-            </a>
-          </button>
-        </div>
+            ))
+        ) : (
+          <p>Sizda bilet mavjud emas !</p>
+        )}
       </Modal>
     </div>
   );

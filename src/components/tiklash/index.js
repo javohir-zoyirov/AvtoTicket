@@ -18,6 +18,8 @@ export const Tiklash = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+  console.log(Object.values(ticketValue).length);
+  
   return (
     <div style={{ backgroundColor: "#f5f8fa", height: "100vh" }}>
       <Header />
@@ -60,7 +62,7 @@ export const Tiklash = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        {ticketValue.length === 0 ? (
+        {Object.values(ticketValue).length ? (
           Object.values(ticketValue)
             .filter((item) => item.ticketPhone.includes(value))
             .map((res, index) => (

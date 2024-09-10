@@ -3,14 +3,15 @@ import { Calendar, Table, theme, Modal } from "antd";
 import "./reys.css";
 import { useContext } from "react";
 import { ApiContext } from "../context";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { ArrowLeftOutlined } from "@ant-design/icons";
+import { useSearchParams } from "react-router-dom";
+import { logRoles } from "@testing-library/react";
 const columns = [
   {
     title: "Ketish",
     dataIndex: "leaveTime",
     key: "leaveTime",
-    // className: "ketish-column",
     render: (text) => (
       <span style={{ color: "blue", fontWeight: "bold" }}>{text}</span>
     ),
@@ -19,7 +20,6 @@ const columns = [
     title: "Kelish",
     dataIndex: "arriveTime",
     key: "arriveTime",
-    // className: "kelish-column",
     render: (text) => (
       <span style={{ color: "green", fontWeight: "bold" }}>{text}</span>
     ),
@@ -83,6 +83,7 @@ export const Reys = () => {
     region2Data,
     reys2Data,
   } = useContext(ApiContext);
+  
   const navigate = useNavigate();
   const showModal = () => {
     setIsModalOpen(true);
@@ -134,7 +135,11 @@ export const Reys = () => {
     border: `1px solid ${token.colorBorderSecondary}`,
     borderRadius: token.borderRadiusLG,
   };
-  let reys = `${regionDeparture}-${regionArrive}`;
+  const { arrive, departure } = useParams();
+  // console.log(departure, " <------departure", arrive, "<------arrive");
+  let reys = `${departure}-${arrive}`;
+  console.log(reys);
+  
 
   let filterReys = reys2Data.filter((item) => {
     if (item.date === date) {

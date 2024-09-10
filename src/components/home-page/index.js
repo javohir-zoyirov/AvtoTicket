@@ -102,63 +102,71 @@ export const HomePage = () => {
 
         <div className="row my-3">
           <div className="col-lg-3 col-6">
-          <div
-            onClick={showModal}
-            style={{ cursor: "pointer", height: "80px" }}
-            className="bg-white  p-3 rounded-4 pointer w-100 mb-4"
-          >
-            <p className="text-secondary fw-bold m-0 text-start">Qayerdan</p>
-            <p className="p-0 m-0">
-              {" "}
-              <span className="text-black fw-bold">{regionDeparture}</span>
-              <span className="text-secondary fw-bold ms-3">
-                {districtDeparture.slice(0,10)}
-              </span>
-            </p>
-          </div>
-          </div>
-          <div className="col-lg-3 col-6">
-          <div
-            onClick={showModal2}
-            style={{ cursor: "pointer", height: "80px" }}
-            className="bg-white p-3 rounded-4 w-100 mb-4"
-          >
-            <p className="text-secondary fw-bold m-0 text-start">Qayerga</p>
-            <p className="p-0 m-0">
-              <span className="text-black fw-bold">{regionArrive}</span>
-              <span className="text-secondary fw-bold ms-3">
-                {districtArrive.slice(0,9)}
-              </span>
-            </p>
-          </div>
-          </div>
-          <div className="col-lg-3 col-6">
-          <div
-            onClick={showModal3}
-            style={{ cursor: "pointer", height: "80px" }}
-            className="bg-white p-3 rounded-4 w-100 mb-4"
-          >
-            <div className="">
-              <span>
-                <p className="text-secondary fw-bold m-0 p-0 text-start">
-                  Qachon
-                </p>
-                <p className="p-0 m-0 fw-bold ">{date}</p>
-              </span>
+            <div
+              onClick={showModal}
+              style={{ cursor: "pointer", height: "80px" }}
+              className="bg-white  p-3 rounded-4 pointer w-100 mb-4"
+            >
+              <p className="text-secondary fw-bold m-0 text-start">Qayerdan</p>
+              <p className="p-0 m-0">
+                {" "}
+                <span className="text-black fw-bold">{regionDeparture}</span>
+                <span className="text-secondary fw-bold ms-3">
+                  {districtDeparture.slice(0, 10)}
+                </span>
+              </p>
             </div>
           </div>
+          <div className="col-lg-3 col-6">
+            <div
+              onClick={showModal2}
+              style={{ cursor: "pointer", height: "80px" }}
+              className="bg-white p-3 rounded-4 w-100 mb-4"
+            >
+              <p className="text-secondary fw-bold m-0 text-start">Qayerga</p>
+              <p className="p-0 m-0">
+                <span className="text-black fw-bold">{regionArrive}</span>
+                <span className="text-secondary fw-bold ms-3">
+                  {districtArrive.slice(0, 9)}
+                </span>
+              </p>
+            </div>
           </div>
           <div className="col-lg-3 col-6">
-          <button
-          disabled={districtDeparture === "" || districtArrive === "" || date === null ? true :false }
-            onClick={() => {
-              navigate("/reys");
-            }}
-            style={{ cursor: "pointer", backgroundColor: "#18aaf2", }}
-            className="text-white px-5 py-4 rounded-4 fw-bold btn w-100 mb-4"
-          >
-            Qidiruvni boshlash
-          </button>
+            <div
+              onClick={showModal3}
+              style={{ cursor: "pointer", height: "80px" }}
+              className="bg-white p-3 rounded-4 w-100 mb-4"
+            >
+              <div className="">
+                <span>
+                  <p className="text-secondary fw-bold m-0 p-0 text-start">
+                    Qachon
+                  </p>
+                  <p className="p-0 m-0 fw-bold ">{date}</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-6">
+            <button
+              disabled={
+                districtDeparture === "" ||
+                districtArrive === "" ||
+                date === null
+                  ? true
+                  : false
+              }
+              onClick={() => {
+                navigate(
+                  `/${regionDeparture}/${regionArrive}`
+                );
+              }}
+              style={{ cursor: "pointer", backgroundColor: "#18aaf2" }}
+              className="text-white px-5 py-4 rounded-4 fw-bold btn w-100 mb-4"
+            >
+              Qidiruvni boshlash
+            </button>
           </div>
         </div>
 
@@ -172,7 +180,7 @@ export const HomePage = () => {
                 fill="currentColor"
                 class="bi bi-signpost-split"
                 viewBox="0 0 16 16"
-                style={{color: "#18aaf2"}}
+                style={{ color: "#18aaf2" }}
               >
                 <path d="M7 7V1.414a1 1 0 0 1 2 0V2h5a1 1 0 0 1 .8.4l.975 1.3a.5.5 0 0 1 0 .6L14.8 5.6a1 1 0 0 1-.8.4H9v10H7v-5H2a1 1 0 0 1-.8-.4L.225 9.3a.5.5 0 0 1 0-.6L1.2 7.4A1 1 0 0 1 2 7zm1 3V8H2l-.75 1L2 10zm0-5h6l.75-1L14 3H8z" />
               </svg>
@@ -201,7 +209,7 @@ export const HomePage = () => {
                 fill="currentColor"
                 class="bi bi-ticket-detailed"
                 viewBox="0 0 16 16"
-                style={{color: "#18aaf2"}}
+                style={{ color: "#18aaf2" }}
               >
                 <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2z" />
                 <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5z" />
@@ -232,7 +240,7 @@ export const HomePage = () => {
                 fill="currentColor"
                 class="bi bi-ticket-detailed"
                 viewBox="0 0 16 16"
-                style={{color: "#18aaf2"}}
+                style={{ color: "#18aaf2" }}
               >
                 <path d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5M5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2z" />
                 <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5z" />
@@ -242,10 +250,15 @@ export const HomePage = () => {
                 Muammo bormi? 8:00-20:00 Texnik yordam xizmatiga murojaat qiling
               </p>
               <button
-                style={{ border: "1px solid #18aaf2"}}
+                style={{ border: "1px solid #18aaf2" }}
                 className="btn rounded-3 fw-bold"
               >
-                <a style={{textDecoration:"none", color: "#18aaf2" }} href="tel: +998938032475">Qo'ng'iroq qilish</a>
+                <a
+                  style={{ textDecoration: "none", color: "#18aaf2" }}
+                  href="tel: +998938032475"
+                >
+                  Qo'ng'iroq qilish
+                </a>
               </button>
             </div>
           </div>
@@ -269,7 +282,7 @@ export const HomePage = () => {
                 }}
                 className="btn border my-3 rounded-4 text-secondary fw-bold py-2"
               >
-                <ArrowLeftOutlined /> Hududga qaytish 
+                <ArrowLeftOutlined /> Hududga qaytish
               </button>
               <div className="d-flex align-items-center gap-2 flex-wrap">
                 {filterData.map((item, index) => (
@@ -318,8 +331,8 @@ export const HomePage = () => {
               <button
                 onClick={() => {
                   setFilterData2([]);
-                  setDistrictArrive('');
-                  setRegionArrive('');
+                  setDistrictArrive("");
+                  setRegionArrive("");
                 }}
                 className="btn border my-3 rounded-4 text-secondary fw-bold py-2"
               >

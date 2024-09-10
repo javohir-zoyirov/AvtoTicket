@@ -92,7 +92,10 @@ function App() {
             <Route path="/question-answer" element={<Questions />} />
             <Route path="/video" element={<Video />} />
             <Route path="/tiklash" element={<Tiklash />} />
-            <Route path="/reys" element={<Reys />} />
+            <Route
+              path="/:departure/:arrive"
+              element={<Reys />}
+            />
             <Route path="/ticket-choose" element={<TicketChoose />} />
             <Route path="/order" element={<Order />} />
             <Route path="/payment" element={<Payment />} />
